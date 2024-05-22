@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Stone Paper Scissors Game</title>
+      <link rel="stylesheet" href="styles.css" />
+   </head>
+   <body>
+      <div id="home-screen">
+         <div id="scoreboard">
+            <div class="game-title">
+               <ul>
+                  <li>Rock</li>
+                  <li>Paper</li>
+                  <li>Scissors</li>
+               </ul>
+            </div>
+            <div class="score-display">
+               <div>
+                  <span class="score">Computer Score</span>
+                  <span
+                     style="font-size: 1.9em; font-weight: bolder"
+                     id="computer-score"
+                     >0</span
+                  >
+               </div>
+               <div>
+                  <span class="score"> Your Score </span>
+                  <span
+                     style="font-size: 1.9em; font-weight: bolder"
+                     id="user-score"
+                     >0</span
+                  >
+               </div>
+            </div>
+         </div>
+
+         <div class="flex-box">
+            <div class="box1">
+               <div id="choices">
+                  <div class="gestures-icons">
+                     <div class="row-icons">
+                        <div class="choice stone" data-choice="stone">
+                           <img
+                              src="asset/stone.png"
+                              alt="stone"
+                              data-choice="stone"
+                           />
+                        </div>
+                        <div class="choice scissor" data-choice="scissor">
+                           <img
+                              src="asset/scissor.png"
+                              alt="scissor"
+                              data-choice="scissor"
+                           />
+                        </div>
+                     </div>
+                     <div class="choice paper" data-choice="paper">
+                        <img
+                           src="asset/paper.png"
+                           alt="paper"
+                           data-choice="paper"
+                        />
+                     </div>
+                  </div>
+                  <div class="lines">
+                     <div class="line1"></div>
+                     <div class="line2"></div>
+                     <div class="line3"></div>
+                  </div>
+               </div>
+               <div id="rules-display" class="hidden2">
+                  <h2>Game Rules</h2>
+                  <ul>
+                     <li>
+                        Rock beats scissors, scissors beat paper, and paper
+                        beats rock.
+                     </li>
+                     <li>
+                        Agree ahead of time whether you’ll count off “rock,
+                        paper, scissors, shoot” or just “rock, paper, scissors.”
+                     </li>
+                     <li>
+                        Use rock, paper, scissors to settle minor decisions or
+                        simply play to pass the time
+                     </li>
+                     <li>
+                        If both players lay down the same hand, each player lays
+                        down another hand
+                     </li>
+                  </ul>
+                  <button id="close-rules">X</button>
+               </div>
+            </div>
+            <div class="box2">
+               <button id="reset" class="btn">Reset Scores</button>
+               <button id="rules" class="btn">Rules</button>
+            </div>
+         </div>
+      </div>
+
+      <div id="result-screen" class="hidden">
+         <div id="score-update">
+            <div class="game-title">
+               <ul>
+                  <li>Rock</li>
+                  <li>Paper</li>
+                  <li>Scissors</li>
+               </ul>
+            </div>
+
+            <div class="score-display">
+               <div>
+                  <span class="score">Computer Score</span>
+                  <span
+                     style="font-size: 1.9em; font-weight: bolder"
+                     id="computer-score-result"
+                     >0</span
+                  >
+               </div>
+               <div>
+                  <span class="score"> Your Score </span>
+                  <span
+                     style="font-size: 1.9em; font-weight: bolder"
+                     id="user-score-result"
+                     >0</span
+                  >
+               </div>
+            </div>
+         </div>
+         <div id="choices-result">
+            <div>You Picked <span id="user-choice-result"></span></div>
+
+            <div>
+               <div id="result-message"></div>
+               <button id="play-again-result">Play Again</button>
+            </div>
+
+            <div>Computer Picked <span id="computer-choice-result"></span></div>
+         </div>
+         <button id="next" class="btn hidden">Next</button>
+      </div>
+
+      <div id="next-screen" class="hidden">
+         <div class="img-container">
+            <img src="asset/win.png" alt="cup" />
+         </div>
+         <div>
+            <h2 id="win-message">Hurray!!</h2>
+            <h3>You Won The Game</h3>
+            <button id="play-again-next">Play Again</button>
+         </div>
+      </div>
+
+      <script src="script.js"></script>
+   </body>
+</html>
