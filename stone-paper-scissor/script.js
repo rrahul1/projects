@@ -113,7 +113,7 @@ function displayResult(userChoice, computerChoice, result) {
       resultMessage += "You lose!";
       userScorRes.classList.remove("animate");
       pcScoreRes.classList.add("animate");
-   } else {
+   } else if (userChoice === computerChoice) {
       resultMessage += "It's a draw!";
       pcScoreRes.classList.remove("animate");
       userScorRes.classList.remove("animate");
